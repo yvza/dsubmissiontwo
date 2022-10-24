@@ -1,22 +1,24 @@
 export function addBook(judul, penulis, tahun, status){
     let book = [
         {
-            judul: judul,
-            penulis: penulis,
-            tahun: tahun,
-            status: status
+            id: randomizeId(),
+            title: judul,
+            author: penulis,
+            year: tahun,
+            isComplete: status
         }
     ];
 
     if (localStorage.getItem('books')) {
         let books = JSON.parse(localStorage.getItem('books'))
-        let searchExistingTitle = books.find(res => res.judul === judul)
+        let searchExistingTitle = books.find(res => res.title === judul)
         if (typeof searchExistingTitle == 'undefined') {
             let exitingBookConstruct = {
-                judul: judul,
-                penulis: penulis,
-                tahun: tahun,
-                status: status
+                id: randomizeId(),
+                title: judul,
+                author: penulis,
+                year: tahun,
+                isComplete: status
             }
             localStorage.removeItem('books')
             books.push(exitingBookConstruct)
@@ -28,4 +30,8 @@ export function addBook(judul, penulis, tahun, status){
     } else {
         localStorage.setItem('books', JSON.stringify(book))
     }
+}
+
+function randomizeId(){
+    return Math.floor(Math.random() * 1000000)
 }
