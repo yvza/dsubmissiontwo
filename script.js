@@ -1,6 +1,7 @@
 'use strict'
 
 import { addBook } from './modules/addBook.js'
+import { searchBook } from './modules/searchBook.js'
 
 window.addEventListener('DOMContentLoaded', (event) => {
     let imgSocialLink = document.getElementsByClassName('link')
@@ -24,7 +25,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
     let getSearchBookButton = document.getElementById('searchBook')
     getSearchBookButton.addEventListener('click', function(e){
         e.preventDefault()
-        let getSearchedString = document.getElementById('searchBook').value
-        console.log(getSearchedString)
+        let getSearchedString = document.getElementById('search').value
+        searchBook(getSearchedString)
     })
 })
