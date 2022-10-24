@@ -92,7 +92,7 @@ header figure img:hover {
     display: block;
 }
 
-#book-adder h1, #searcher h1, #unread h1, #legible h1 {
+#book-adder h1, #searcher h1, #unread header h1, #legible h1 {
     position: relative;
     display: inline;
 }
@@ -115,7 +115,7 @@ header figure img:hover {
     background: #467fd0;
 }
 
-#unread h1::before, #legible h1::before {
+#unread header h1::before, #legible h1::before {
     content: '';
     width: 20px;
     height: 20px;
@@ -125,7 +125,7 @@ header figure img:hover {
     left: -40px;
 }
 
-#unread h1::before {
+#unread header h1::before {
     background: #ff4444;
 }
 
