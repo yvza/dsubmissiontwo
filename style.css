@@ -8,11 +8,14 @@
 
 * {
     box-sizing: border-box;
-    background: var(--body-background);
     font-family: 'Roboto', sans-serif;
 }
 
-header {
+body {
+    background: var(--body-background);
+}
+
+header, main {
     max-width: 1200px;
     background: var(--content-background);
     padding: 15px;
@@ -72,4 +75,35 @@ header figure img:hover {
     opacity: 1;
     transition: all 0.6s ease;
     cursor: pointer;
+}
+
+main {
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+#book-adder {
+    width: 100%;
+}
+
+#book-adder header {
+    text-align: center;
+    width: 100%;
+    display: block;
+}
+
+#book-adder h1 {
+    position: relative;
+    display: inline;
+}
+
+#book-adder h1::before {
+    content: '';
+    width: 20px;
+    height: 20px;
+    background: #42ba96;
+    border-radius: 50%;
+    position: absolute;
+    top: 6px;
+    left: -40px;
 }
