@@ -4,6 +4,10 @@
     --info-main-color: #4C84FF;
     --font-main-color: #8A8AA0;
     --border-radius: 20px;
+    --indicator-blue: #467fd0;
+    --indicator-yellow: #ffbb33;
+    --indicator-red: #ff4444;
+    --indicator-green: #42ba96;
 }
 
 * {
@@ -15,7 +19,9 @@ body {
     background: var(--body-background);
 }
 
-header, #book-adder, #searcher {
+header, 
+#book-adder, 
+#searcher {
     max-width: 1200px;
     background: var(--content-background);
     padding: 15px;
@@ -58,8 +64,11 @@ header section h5:nth-of-type(2) {
     margin-top: 10px;
 }
 
-header section, header section h3, header section h5, 
-header figure, header figure img {
+header section, 
+header section h3, 
+header section h5, 
+header figure, 
+header figure img {
     background: var(--content-background);
 }
 
@@ -77,27 +86,36 @@ header figure img:hover {
     cursor: pointer;
 }
 
-#book-adder, #searcher {
+#book-adder, 
+#searcher {
     margin-top: 20px;
 }
 
-#book-adder, #searcher {
+#book-adder, 
+#searcher {
     flex-wrap: wrap;
     width: 100%;
 }
 
-#book-adder header, #searcher header, #unread header, #legible header {
+#book-adder header, 
+#searcher header, 
+#unread header, 
+#legible header {
     text-align: center;
     width: 100%;
     display: block;
 }
 
-#book-adder h1, #searcher h1, #unread header h1, #legible h1 {
+#book-adder h1, 
+#searcher h1, 
+#unread header h1, 
+#legible header h1 {
     position: relative;
     display: inline;
 }
 
-#book-adder h1::before, #searcher h1::before {
+#book-adder h1::before, 
+#searcher h1::before {
     content: '';
     width: 20px;
     height: 20px;
@@ -108,14 +126,24 @@ header figure img:hover {
 }
 
 #book-adder h1::before{
-    background: #42ba96;
+    background: var(--indicator-blue);
 }
 
 #searcher h1::before {
-    background: #467fd0;
+    background: var(--indicator-yellow);
 }
 
-#unread header h1::before, #legible h1::before {
+#unread, 
+#legible {
+    background: var(--content-background);
+    padding: 15px 30px 30px;
+    border-radius: var(--border-radius);
+    flex: 1;
+    height: fit-content;
+}
+
+#unread header h1::before, 
+#legible header h1::before {
     content: '';
     width: 20px;
     height: 20px;
@@ -126,11 +154,11 @@ header figure img:hover {
 }
 
 #unread header h1::before {
-    background: #ff4444;
+    background: var(--indicator-red);
 }
 
-#legible h1::before {
-    background: #ffbb33;
+#legible header h1::before {
+    background: var(--indicator-green);
 }
 
 #book-fetcher {
@@ -140,14 +168,40 @@ header figure img:hover {
     display: flex;
 }
 
-#unread, #legible {
-    flex: 1;
-}
-
 #unread {
-    margin-right: 5px;
+    margin-right: 10px;
 }
 
 #legible{
-    margin-left: 5px;
+    margin-left: 10px;
+}
+
+#unread-data .book {
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+}
+
+#legible-data .book {
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+}
+
+.book {
+    border-radius: var(--border-radius);
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.book .control {
+    display: flex;
+    flex-direction: column;
+}
+
+.book:not(:first-child), 
+.book .control button:not(:first-child) {
+    margin-top: 20px;
+}
+
+.book:hover {
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
