@@ -19,7 +19,7 @@
         <section>
             <h3>Akhmad Yuza Oditya</h3>
             <h5>Web and Mobile Developer</h5>
-            <h5> Beasiswa Full Stack Developer dari Lintasarta Cloudeka DigiSchool 2022</h5>
+            <h5> Beasiswa Full Stack Developer dari Lintasarta Cloudeka DigiSchool 2022 (Dicoding)</h5>
         </section>
         <figure>
             <img class="link" width="70px" height="70px" src="./assets/GitHub-Mark-120px-plus.png" alt="GitHub">
@@ -38,7 +38,9 @@
                 <label for="penulis">Penulis:</label><br>
                 <input type="text" id="penulis" name="penulis" value="Yuza"><br>
                 <label for="tahun">Tahun:</label><br>
-                <input type="text" id="tahun" name="tahun" value="2022"><br><br>
+                <input type="text" id="tahun" name="tahun" value="2022"><br>
+                <label for="legible-checkbox">Tandai sudah dibaca</label>
+                <input type="checkbox" name="checkbox" id="legible-checkbox"><br><br>
                 <input type="submit" value="Submit">
             </form>
         </section>
@@ -55,8 +57,18 @@
         </section>
 
         <section id="book-fetcher">
-            <section id="unread"></section>
-            <section id="legible"></section>
+            <section id="unread">
+                <header>
+                    <h1>Belum Selesai Dibaca</h1>
+                </header>
+                <section id="unread-data"></section>
+            </section>
+            <section id="legible">
+                <header>
+                    <h1>Selesai Dibaca</h1>
+                </header>
+                <section id="legible-data"></section>
+            </section>
         </section>
     </main>
     
