@@ -3,4 +3,73 @@
     --body-background: #E9EBF2;
     --info-main-color: #4C84FF;
     --font-main-color: #8A8AA0;
+    --border-radius: 20px;
+}
+
+* {
+    box-sizing: border-box;
+    background: var(--body-background);
+    font-family: 'Roboto', sans-serif;
+}
+
+header {
+    max-width: 1200px;
+    background: var(--content-background);
+    padding: 15px;
+    border-radius: var(--border-radius);
+    margin: 0 auto;
+    display: flex;
+}
+
+header figure.rounded-me-img {
+    width: 95px;
+    height: 126px;
+    border-radius: 50%;
+    background: url('./me.jpg') no-repeat top center;
+    background-size: cover;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+header figure:nth-of-type(2) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header section {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+header section h3 {
+    margin-top: 0;
+}
+
+header section h5 {
+    margin: 0;
+}
+
+header section h5:nth-of-type(2) {
+    margin-top: 10px;
+}
+
+header section, header section h3, header section h5, 
+header figure, header figure img {
+    background: var(--content-background);
+}
+
+header figure img {
+    opacity: 0.5;
+}
+
+header figure img:nth-of-type(2) {
+    margin-left: 30px;
+}
+
+header figure img:hover {
+    opacity: 1;
+    transition: all 0.6s ease;
+    cursor: pointer;
 }
