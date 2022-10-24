@@ -86,13 +86,13 @@ header figure img:hover {
     width: 100%;
 }
 
-#book-adder header, #searcher header {
+#book-adder header, #searcher header, #unread header, #legible header {
     text-align: center;
     width: 100%;
     display: block;
 }
 
-#book-adder h1, #searcher h1 {
+#book-adder h1, #searcher h1, #unread h1, #legible h1 {
     position: relative;
     display: inline;
 }
@@ -113,4 +113,41 @@ header figure img:hover {
 
 #searcher h1::before {
     background: #467fd0;
+}
+
+#unread h1::before, #legible h1::before {
+    content: '';
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    position: absolute;
+    top: 4px;
+    left: -40px;
+}
+
+#unread h1::before {
+    background: #ff4444;
+}
+
+#legible h1::before {
+    background: #ffbb33;
+}
+
+#book-fetcher {
+    max-width: 1200px;
+    border-radius: var(--border-radius);
+    margin: 20px auto 0;
+    display: flex;
+}
+
+#unread, #legible {
+    flex: 1;
+}
+
+#unread {
+    margin-right: 5px;
+}
+
+#legible{
+    margin-left: 5px;
 }
