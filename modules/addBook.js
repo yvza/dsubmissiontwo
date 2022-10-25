@@ -27,6 +27,9 @@ export async function addBook(judul, penulis, tahun, status){
             localStorage.removeItem('books')
             books.push(exitingBookConstruct)
             localStorage.setItem('books', JSON.stringify(books))
+            document.getElementById('judul').value = ''
+            document.getElementById('penulis').value = ''
+            document.getElementById('tahun').value = ''
             clearBook()
             loadBook()
             // trigger some notif, succes adding new book
