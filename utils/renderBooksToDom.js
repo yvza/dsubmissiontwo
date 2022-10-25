@@ -19,7 +19,7 @@ export async function renderBooksToDom(books, isFound){
                         <h6>Tahun: "+res.year+"</h6> \
                     </section> \
                     <section class='control'> \
-                        <button type='button' class='moveRack' value='"+res.id+"'>Tandai Belum Dibaca</button> \
+                        <button type='button' class='moveRack' value='"+res.id+"'>Tandai Belum Selesai Dibaca</button> \
                         <button type='button' class='deleteBook' value='"+res.id+"'>Hapus Buku</button> \
                     </section> \
                 </section>"
@@ -31,7 +31,7 @@ export async function renderBooksToDom(books, isFound){
                         <h6>Tahun: "+res.year+"</h6> \
                     </section> \
                     <section class='control'> \
-                        <button type='button' class='moveRack' value='"+res.id+"'>Tandai Belum Dibaca</button> \
+                        <button type='button' class='moveRack' value='"+res.id+"'>Tandai Sudah Dibaca</button> \
                         <button type='button' class='deleteBook' value='"+res.id+"'>Hapus Buku</button> \
                     </section> \
                 </section>"
