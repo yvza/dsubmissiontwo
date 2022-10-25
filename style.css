@@ -168,6 +168,10 @@ header figure img:hover {
     display: flex;
 }
 
+#book-fetcher header {
+    padding-bottom: 30px;
+}
+
 #unread {
     margin-right: 10px;
 }
