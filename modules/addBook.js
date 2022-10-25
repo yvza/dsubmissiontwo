@@ -1,4 +1,6 @@
 import { randomizeId } from '../utils/idRandomizer.js'
+import { loadBook } from '../modules/loadBook.js'
+import { clearBook } from '../utils/clearBook.js'
 
 export function addBook(judul, penulis, tahun, status){
     let book = [
@@ -25,11 +27,15 @@ export function addBook(judul, penulis, tahun, status){
             localStorage.removeItem('books')
             books.push(exitingBookConstruct)
             localStorage.setItem('books', JSON.stringify(books))
+            clearBook()
+            loadBook()
             // trigger some notif, succes adding new book
         } else {
             // trigger some notif, error cz book was exist
         }
     } else {
         localStorage.setItem('books', JSON.stringify(book))
+        clearBook()
+        loadBook()
     }
 }
