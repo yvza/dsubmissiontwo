@@ -3,7 +3,7 @@
 import { addBook } from './modules/addBook.js'
 import { searchBook } from './modules/searchBook.js'
 import { loadBook } from './modules/loadBook.js'
-import { moveRack } from './modules/moveRack.js'
+import { reinitControlListener } from './utils/reinitControlListener.js'
 
 window.addEventListener('DOMContentLoaded', (event) => {
     // my url
@@ -37,12 +37,5 @@ window.addEventListener('DOMContentLoaded', (event) => {
     // load all book
     loadBook()
 
-    // listening to move rack button
-    let getMoveRackButton = document.querySelectorAll('.moveRack')
-    getMoveRackButton.forEach(button => {
-        button.addEventListener('click', () => {
-            let idBook = button.value
-            moveRack(idBook)
-        })
-    })
+    reinitControlListener()
 })
