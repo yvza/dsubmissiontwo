@@ -15,7 +15,7 @@ export function renderBooksToDom(books, isFound){
                         <h6>Tahun: "+res.year+"</h6> \
                     </section> \
                     <section class='control'> \
-                        <button type='button' value='"+res.id+"'>Tandai Belum Dibaca</button> \
+                        <button type='button' class='moveRack' value='"+res.id+"'>Tandai Belum Dibaca</button> \
                         <button type='button' value='"+res.id+"'>Hapus Buku</button> \
                     </section> \
                 </section>"
@@ -27,7 +27,7 @@ export function renderBooksToDom(books, isFound){
                         <h6>Tahun: "+res.year+"</h6> \
                     </section> \
                     <section class='control'> \
-                        <button type='button' value='"+res.id+"'>Tandai Belum Dibaca</button> \
+                        <button type='button' class='moveRack' value='"+res.id+"'>Tandai Belum Dibaca</button> \
                         <button type='button' value='"+res.id+"'>Hapus Buku</button> \
                     </section> \
                 </section>"
