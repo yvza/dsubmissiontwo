@@ -1,3 +1,5 @@
+import { randomizeId } from '../utils/idRandomizer.js'
+
 export function addBook(judul, penulis, tahun, status){
     let book = [
         {
@@ -30,8 +32,4 @@ export function addBook(judul, penulis, tahun, status){
     } else {
         localStorage.setItem('books', JSON.stringify(book))
     }
-}
-
-function randomizeId(){
-    return Math.floor(Math.random() * 1000000)
 }
