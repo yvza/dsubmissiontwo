@@ -4,7 +4,7 @@ export function addBook(judul, penulis, tahun, status){
             id: randomizeId(),
             title: judul,
             author: penulis,
-            year: tahun,
+            year: parseInt(tahun),
             isComplete: status
         }
     ];
@@ -17,7 +17,7 @@ export function addBook(judul, penulis, tahun, status){
                 id: randomizeId(),
                 title: judul,
                 author: penulis,
-                year: tahun,
+                year: parseInt(tahun),
                 isComplete: status
             }
             localStorage.removeItem('books')
