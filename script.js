@@ -2,6 +2,7 @@
 
 import { addBook } from './modules/addBook.js'
 import { searchBook } from './modules/searchBook.js'
+import { loadBook } from './modules/loadBook.js'
 
 window.addEventListener('DOMContentLoaded', (event) => {
     let imgSocialLink = document.getElementsByClassName('link')
@@ -28,4 +29,6 @@ window.addEventListener('DOMContentLoaded', (event) => {
         let getSearchedString = document.getElementById('search').value
         searchBook(getSearchedString)
     })
+
+    loadBook()
 })
