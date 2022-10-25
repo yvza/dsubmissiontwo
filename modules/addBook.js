@@ -2,7 +2,7 @@ import { randomizeId } from '../utils/idRandomizer.js'
 import { loadBook } from '../modules/loadBook.js'
 import { clearBook } from '../utils/clearBook.js'
 
-export function addBook(judul, penulis, tahun, status){
+export async function addBook(judul, penulis, tahun, status){
     let book = [
         {
             id: randomizeId(),
@@ -15,7 +15,7 @@ export function addBook(judul, penulis, tahun, status){
 
     if (localStorage.getItem('books')) {
         let books = JSON.parse(localStorage.getItem('books'))
-        let searchExistingTitle = books.find(res => res.title === judul)
+        let searchExistingTitle = await books.find(res => res.title === judul)
         if (typeof searchExistingTitle == 'undefined') {
             let exitingBookConstruct = {
                 id: randomizeId(),
