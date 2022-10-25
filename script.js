@@ -3,8 +3,10 @@
 import { addBook } from './modules/addBook.js'
 import { searchBook } from './modules/searchBook.js'
 import { loadBook } from './modules/loadBook.js'
+import { moveRack } from './modules/moveRack.js'
 
 window.addEventListener('DOMContentLoaded', (event) => {
+    // my url
     let imgSocialLink = document.getElementsByClassName('link')
     imgSocialLink[0].addEventListener('click', function(){
         window.open('http://github.com/yvza', '_blank').focus()
@@ -13,6 +15,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
         window.open('https://stackoverflow.com/users/8111050/yuza', '_blank').focus()
     })
 
+    // adding new book
     let getAddBookButton = document.getElementById('addBook')
     getAddBookButton.addEventListener('click', function(e){
         e.preventDefault()
@@ -23,6 +26,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
         addBook(getJudul, getPenulis, getTahun, getStatus)
     })
 
+    // do a search
     let getSearchBookButton = document.getElementById('searchBook')
     getSearchBookButton.addEventListener('click', function(e){
         e.preventDefault()
@@ -30,5 +34,15 @@ window.addEventListener('DOMContentLoaded', (event) => {
         searchBook(getSearchedString)
     })
 
+    // load all book
     loadBook()
+
+    // listening to move rack button
+    let getMoveRackButton = document.querySelectorAll('.moveRack')
+    getMoveRackButton.forEach(button => {
+        button.addEventListener('click', () => {
+            let idBook = button.value
+            moveRack(idBook)
+        })
+    })
 })
