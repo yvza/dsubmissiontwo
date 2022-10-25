@@ -1,12 +1,16 @@
-export function renderBooksToDom(books, isFound){
+import { reinitControlListener } from './reinitControlListener.js'
+
+export async function renderBooksToDom(books, isFound){
     let unreadBookDom = document.getElementById('unread-data')
     let legibleBookDom = document.getElementById('legible-data')
     
     let unreadBookItemHtml = ""
     let legibleBookItemHtml = ""
 
+    let list_book
+
     if (isFound) {
-        books.map(res => {
+        list_book = await books.map(res => {
             if (res.isComplete) {
                 legibleBookItemHtml += "<section class='book'> \
                     <section> \
@@ -62,4 +66,6 @@ export function renderBooksToDom(books, isFound){
 
     unreadBookDom.insertAdjacentHTML("afterbegin", unreadBookItemHtml)
     legibleBookDom.insertAdjacentHTML("afterbegin", legibleBookItemHtml)
+
+    reinitControlListener()
 }
