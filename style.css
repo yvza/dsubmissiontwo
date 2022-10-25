@@ -321,6 +321,20 @@ button.moveRack:active {
     border-color: #08080a;
 }
 
+button.editTitle {
+    border: 1px solid #d4920d;
+    background-color: #d4920d;
+}
+
+button.editTitle:hover {
+    background-color: #cf8b03;
+    border-color: #cf8b03;
+}
+
+button.editTitle:active {
+    background-color: #cf8b03;
+    border-color: #cf8b03;
+}
 button.deleteBook {
     border: 1px solid #fa3131;
     background-color: #fa3131;
