@@ -228,7 +228,7 @@ input[type=text] {
     flex: 1;
 }
 
-input[type=submit] {
+input[type=submit], button[type=button] {
     border-radius: 4px;
     cursor: pointer;
     box-sizing: border-box;
@@ -248,11 +248,11 @@ input[type=submit] {
     -webkit-user-select: none;
 }
 
-input[type=submit]:focus {
+input[type=submit]:focus, button[type=button]:focus {
     outline: 0;
 }
 
-input[type=submit]:disabled {
+input[type=submit]:disabled, button[type=button]:disabled {
     opacity: .5;
 }
 
@@ -272,16 +272,46 @@ input#addBook:active {
 }
 
 input#searchBook {
-    border: 1px solid #fabe47;
-    background-color: #fabe47;
+    border: 1px solid #f7b32d;
+    background-color: #f7b32d;
 }
 
 input#searchBook:hover {
-    background-color: #ffbb33;
-    border-color: #ffbb33;
+    background-color: rgb(241, 169, 23);
+    border-color: rgb(241, 169, 23);
 }
 
 input#searchBook:active {
-    background-color: #fdb118;
-    border-color: #fdb118;
+    background-color: #f0a208;
+    border-color: #f0a208;
+}
+
+button.moveRack {
+    border: 1px solid #2c303a;
+    background-color: #2c303a;
+}
+
+button.moveRack:hover {
+    background-color: #121318;
+    border-color: #121318;
+}
+
+button.moveRack:active {
+    background-color: #08080a;
+    border-color: #08080a;
+}
+
+button.deleteBook {
+    border: 1px solid #fa3131;
+    background-color: #fa3131;
+}
+
+button.deleteBook:hover {
+    background-color: #f71f1f;
+    border-color: #f71f1f;
+}
+
+button.deleteBook:active {
+    background-color: #e40000;
+    border-color: #e40000;
 }
