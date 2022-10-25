@@ -19,8 +19,8 @@ export async function renderBooksToDom(books, isFound){
                         <h6>Tahun: "+res.year+"</h6> \
                     </section> \
                     <section class='control'> \
-                        <button type='button' class='moveRack' value='"+res.id+"'>Tandai Belum Selesai Dibaca</button> \
-                        <button type='button' class='deleteBook' value='"+res.id+"'>Hapus Buku</button> \
+                        <button type='button' class='moveRack' value='"+res.id+"'><i class='bi bi-x-lg'></i>&nbsp; Belum Selesai</button> \
+                        <button type='button' class='deleteBook' value='"+res.id+"'><i class='bi bi-trash3'></i>&nbsp; Hapus Buku</button> \
                     </section> \
                 </section>"
             } else {
@@ -31,8 +31,8 @@ export async function renderBooksToDom(books, isFound){
                         <h6>Tahun: "+res.year+"</h6> \
                     </section> \
                     <section class='control'> \
-                        <button type='button' class='moveRack' value='"+res.id+"'>Tandai Sudah Dibaca</button> \
-                        <button type='button' class='deleteBook' value='"+res.id+"'>Hapus Buku</button> \
+                        <button type='button' class='moveRack' value='"+res.id+"'><i class='bi bi-check-lg'></i>&nbsp; Sudah Selesai</button> \
+                        <button type='button' class='deleteBook' value='"+res.id+"'><i class='bi bi-trash3'></i>&nbsp; Hapus Buku</button> \
                     </section> \
                 </section>"
             }
