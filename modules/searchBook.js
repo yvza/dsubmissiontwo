@@ -1,10 +1,10 @@
 import { clearBook } from '../utils/clearBook.js'
 import { renderBooksToDom } from '../utils/renderBooksToDom.js'
 
-export function searchBook(userInput) {
+export async function searchBook(userInput) {
     if (localStorage.getItem('books')) {
         let books = JSON.parse(localStorage.getItem('books'))
-        let searchedStringIndex = books.findIndex(res => {
+        let searchedStringIndex = await books.findIndex(res => {
             return res.title === userInput
         })
         if (typeof books[searchedStringIndex] != 'undefined') {
