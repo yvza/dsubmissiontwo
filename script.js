@@ -4,6 +4,7 @@ import { addBook } from './modules/addBook.js'
 import { searchBook } from './modules/searchBook.js'
 import { loadBook } from './modules/loadBook.js'
 import { reinitControlListener } from './utils/reinitControlListener.js'
+import { clearBook } from './utils/clearBook.js'
 
 window.addEventListener('DOMContentLoaded', (event) => {
     // my url
@@ -32,6 +33,15 @@ window.addEventListener('DOMContentLoaded', (event) => {
         e.preventDefault()
         let getSearchedString = document.getElementById('search').value
         searchBook(getSearchedString)
+    })
+
+    // clear a search
+    let clearSearchBookButton = document.getElementById('clearSearchBook')
+    clearSearchBookButton.addEventListener('click', function(e){
+        e.preventDefault()
+        document.getElementById('search').value = ''
+        clearBook()
+        loadBook()
     })
 
     // load all book
