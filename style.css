@@ -349,3 +349,39 @@ button.deleteBook:active {
     background-color: #e40000;
     border-color: #e40000;
 }
+
+@media (max-width: 480px) {
+    header, #book-adder, #searcher {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header > section {
+        text-align: center;
+    }
+
+    #book-fetcher {
+        flex-direction: column;
+    }
+
+    #unread {
+        margin-right: 0;
+    }
+
+    #legible {
+        margin: 20px 0 0 0;
+    }
+
+    .book {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .book .control {
+        flex-direction: row;
+    }
+
+    .book .control button:not(:first-child) {
+        margin-left: 5px;
+    }
+}
