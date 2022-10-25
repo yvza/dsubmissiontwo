@@ -6,7 +6,7 @@
     --border-radius: 20px;
     --indicator-blue: #467fd0;
     --indicator-yellow: #ffbb33;
-    --indicator-red: #ff4444;
+    --indicator-red: #fd4848;
     --indicator-green: #42ba96;
 }
 
@@ -204,9 +204,14 @@ header figure img:hover {
     justify-content: space-between;
 }
 
+.book h1 {
+    font-size: .83em;
+}
+
 .book .control {
     display: flex;
     flex-direction: column;
+    align-items: flex-end;
 }
 
 .book:not(:first-child), 
@@ -228,7 +233,7 @@ input[type=text] {
     flex: 1;
 }
 
-input[type=submit], button[type=button] {
+button[type=submit], button[type=button] {
     border-radius: 4px;
     cursor: pointer;
     box-sizing: border-box;
@@ -248,40 +253,55 @@ input[type=submit], button[type=button] {
     -webkit-user-select: none;
 }
 
-input[type=submit]:focus, button[type=button]:focus {
+button[type=submit]:focus, button[type=button]:focus {
     outline: 0;
 }
 
-input[type=submit]:disabled, button[type=button]:disabled {
+button[type=submit]:disabled, button[type=button]:disabled {
     opacity: .5;
 }
 
-input#addBook {
+button#addBook {
     border: 1px solid #1652F0;
     background-color: #1652F0;
 }
 
-input#addBook:hover {
+button#addBook:hover {
     background-color: #0A46E4;
     border-color: #0A46E4;
 }
 
-input#addBook:active {
+button#addBook:active {
     background-color: #0039D7;
     border-color: #0039D7;
 }
 
-input#searchBook {
+button#searchBook {
     border: 1px solid #f7b32d;
     background-color: #f7b32d;
 }
 
-input#searchBook:hover {
+button#searchBook:hover {
     background-color: rgb(241, 169, 23);
     border-color: rgb(241, 169, 23);
 }
 
-input#searchBook:active {
+button#searchBook:active {
+    background-color: #f0a208;
+    border-color: #f0a208;
+}
+
+button#clearSearchBook {
+    border: 1px solid #f7b32d;
+    background-color: #f7b32d;
+}
+
+button#clearSearchBook:hover {
+    background-color: rgb(241, 169, 23);
+    border-color: rgb(241, 169, 23);
+}
+
+button#clearSearchBook:active {
     background-color: #f0a208;
     border-color: #f0a208;
 }
