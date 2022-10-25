@@ -24,7 +24,7 @@ header,
 #searcher {
     max-width: 1200px;
     background: var(--content-background);
-    padding: 15px;
+    padding: 15px 30px 30px;
     border-radius: var(--border-radius);
     margin: 0 auto;
     display: flex;
@@ -216,4 +216,72 @@ header figure img:hover {
 
 .book:hover {
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+input[type=text] {
+    margin: 8px 0;
+    padding: 12px 20px;
+    width: 100%;
+}
+
+#book-adder form, #searcher form {
+    flex: 1;
+}
+
+input[type=submit] {
+    border-radius: 4px;
+    cursor: pointer;
+    box-sizing: border-box;
+    appearance: button;
+    color: #FFFFFF;
+    line-height: 1.15;
+    padding: 12px 16px;
+    position: relative;
+    text-align: center;
+    overflow: visible;
+    text-transform: none;
+    transition: all 80ms ease-in-out;
+    font-size: 14px;
+    width: fit-content;
+    touch-action: manipulation;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+input[type=submit]:focus {
+    outline: 0;
+}
+
+input[type=submit]:disabled {
+    opacity: .5;
+}
+
+input#addBook {
+    border: 1px solid #1652F0;
+    background-color: #1652F0;
+}
+
+input#addBook:hover {
+    background-color: #0A46E4;
+    border-color: #0A46E4;
+}
+
+input#addBook:active {
+    background-color: #0039D7;
+    border-color: #0039D7;
+}
+
+input#searchBook {
+    border: 1px solid #fabe47;
+    background-color: #fabe47;
+}
+
+input#searchBook:hover {
+    background-color: #ffbb33;
+    border-color: #ffbb33;
+}
+
+input#searchBook:active {
+    background-color: #fdb118;
+    border-color: #fdb118;
 }
