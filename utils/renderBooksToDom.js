@@ -20,6 +20,7 @@ export async function renderBooksToDom(books, isFound){
                     </section> \
                     <section class='control'> \
                         <button type='button' class='moveRack' value='"+res.id+"'><i class='bi bi-x-lg'></i>&nbsp; Belum Selesai</button> \
+                        <button type='button' class='editTitle' value='"+res.id+"'><i class='bi bi-pen'></i>&nbsp; Edit Judul</button> \
                         <button type='button' class='deleteBook' value='"+res.id+"'><i class='bi bi-trash3'></i>&nbsp; Hapus Buku</button> \
                     </section> \
                 </section>"
@@ -32,6 +33,7 @@ export async function renderBooksToDom(books, isFound){
                     </section> \
                     <section class='control'> \
                         <button type='button' class='moveRack' value='"+res.id+"'><i class='bi bi-check-lg'></i>&nbsp; Sudah Selesai</button> \
+                        <button type='button' class='editTitle' value='"+res.id+"'><i class='bi bi-pen'></i>&nbsp; Edit Judul</button> \
                         <button type='button' class='deleteBook' value='"+res.id+"'><i class='bi bi-trash3'></i>&nbsp; Hapus Buku</button> \
                     </section> \
                 </section>"
