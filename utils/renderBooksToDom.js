@@ -16,7 +16,7 @@ export function renderBooksToDom(books, isFound){
                     </section> \
                     <section class='control'> \
                         <button type='button' class='moveRack' value='"+res.id+"'>Tandai Belum Dibaca</button> \
-                        <button type='button' value='"+res.id+"'>Hapus Buku</button> \
+                        <button type='button' class='deleteBook' value='"+res.id+"'>Hapus Buku</button> \
                     </section> \
                 </section>"
             } else {
@@ -28,7 +28,7 @@ export function renderBooksToDom(books, isFound){
                     </section> \
                     <section class='control'> \
                         <button type='button' class='moveRack' value='"+res.id+"'>Tandai Belum Dibaca</button> \
-                        <button type='button' value='"+res.id+"'>Hapus Buku</button> \
+                        <button type='button' class='deleteBook' value='"+res.id+"'>Hapus Buku</button> \
                     </section> \
                 </section>"
             }
