@@ -17,6 +17,7 @@ export function searchBook(userInput) {
             // console.log('Buku tidak ditemukan')
         }
     } else {
+        clearBook()
         renderBooksToDom([], 0)
         // console.log('Data buku masih kosong')
         // data buku masih kosong
